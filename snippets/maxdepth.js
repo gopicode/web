@@ -9,13 +9,13 @@ function walk(el, d) {
     var chains = [];
     for (var i = 0; i < n; i += 1) {
         var kid = kids[i];
-        if (d <= 13) {
+        //if (d <= 13) {
             var kchains = walk(kid, d + 1);
             for (j = 0, jn = kchains.length; j < jn; j += 1) {
                 var kchain = leaf.concat(kchains[j]);
                 chains.push(kchain); //.join('>'));
             }
-        }
+        //}
     }
     return chains;
 }
