@@ -5,14 +5,18 @@ var radiusMinor = radiusMajor - 20;
 var radiusSun = 20;
 var radiusEarth = 8;
 
-/*
-https://stackoverflow.com/questions/44874243/drawing-arrows-in-p5js
-*/
+var imgEarth;
+
+function preload() {
+  imgEarth = loadImage('assets/earth_32.png');
+  console.log('preload', typeof imgEarth)
+}
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
   console.log(canvasWidth, canvasHeight);
   background(245);
+  noLoop();
 }
 
 function draw() {
@@ -29,8 +33,10 @@ function draw() {
   var rad = HALF_PI;
   var earthX = centerX + (radiusMajor * Math.cos(rad));
   var earthY = centerY + (radiusMinor * Math.sin(rad));
-  fill('#76A9FF');
-  circle(earthX, earthY, radiusEarth);
+  // fill('#76A9FF');
+  // circle(earthX, earthY, radiusEarth);
+  imageMode(CENTER);
+  image(imgEarth, earthX, earthY);
   drawDot(earthX, earthY);
 }
 
