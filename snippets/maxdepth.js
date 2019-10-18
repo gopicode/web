@@ -1,3 +1,4 @@
+(function() {
 function walk(el, d) {
     var kids = [].slice.call(el.childNodes).filter(node => node.nodeType === 1);
     var leaf = [el.tagName];
@@ -22,7 +23,7 @@ function walk(el, d) {
 
 console.clear();
 var chains = walk(document.documentElement, 0);
-// console.log('chains', JSON.stringify(chains));
+console.log('chains', JSON.stringify(chains));
 var maxd = 0;
 var maxchain = null;
 chains.forEach(chain => {
@@ -34,4 +35,4 @@ chains.forEach(chain => {
 });
 console.log('max depth', maxd);
 console.log('max chain', maxchain);
-
+}())
