@@ -1,0 +1,126 @@
+[Code]
+- write code to append a small icon image next to all the external links (which has _target="blank" attribute) in the page
+- Validate date in the format dd-mm-yyyy
+- Convert Title String to seo friendly. ie., keep only alpha numeric characters and convert spaces into hyphen (Ex: Hello, There! -> hello-there)
+- Data structure to shuffle/append/remove List
+- implement a module loader like http://labjs.com/
+- How to have private  data in object creation pattern (closure, weakmap)
+- What is currying a function. what is the advantage? Implement it. https://hughfdjackson.com/javascript/why-curry-helps/
+
+[UI]
+- autocomplete component with throttled
+- smooth collapsing div http://codepen.io/brundolf/pen/dvoGyw
+- http://tether.io/
+- stacking popups https://oncebot.github.io/popbox.js/
+- Myntra zoom image
+https://www.myntra.com/tshirts/hrx-by-hrithik-roshan/hrx-by-hrithik-roshan-men-white-rapid-dry-camo-training-t-shirt/5842076/buy
+- In place zooming product images (like amazon)
+https://www.amazon.in/Samsung-Galaxy-M30-Gradation-Blue/dp/B07HGJJ58K/ref=sr_1_1_sspa?crid=1XEX0UG6KD948&keywords=samsung+galaxy+m30&qid=1564666162&s=electronics&sprefix=samsung+%2Caps%2C287&sr=1-1-spons&psc=1
+- Json editor https://oxyno-zeta.github.io/react-editable-json-tree/
+- Image croper http://deepliquid.com/projects/Jcrop/demos.php
+- Sprite Cow: http://www.spritecow.com/
+- Custom Alert: http://t4t5.github.io/sweetalert/
+- ComboBox https://github.com/gopicode/components/blob/master/src/ComboBox.jsx
+
+[DOM]
+- How to pass some data when registering event handlers/listeners for an Array of elements?
+    * Assign property to the element itself
+    * Unique Identifier in id attribute of element and use a collection for lookup
+    * Self-invoking wrapper that passes arguments and returns a function
+    * Using .bind to pass arguments
+    * Using data- attributes
+    http://codepen.io/bryc/blog/unique-data-objects-in-multiple-event-handlers
+
+
+[Code]
+write a template engine
+http://krasimirtsonev.com/blog/article/Javascript-template-engine-in-just-20-line
+
+Write a function that takes template and data as arguments and returns the processed template. for example,
+template: "<div>Hi {user}, you got Rs. {amount} cashback and a {coupon} from Myntra!</div>"
+data: {name:"Foo", amount:500}
+the function should return, "<div>Hi Foo, you got Rs. 500 cashback and a {coupon} from Myntra!</div>"
+
+Flat key value json (keys are dot separated) to object tree.
+Input:
+{
+	"user.id": 1,
+	"user.name": "sample",
+	"mkt.inward.default.timeout": 15000,
+	"mkt.inward.default.abc": "ok",
+	"mkt.inward.enabled": true,
+}
+Output:
+{
+    "user": {
+        "id": 1,
+        "name": "sample"
+    },
+    "mkt": {
+        "inward": {
+            "default": {
+                "timeout": 15000,
+                "abc": "ok"
+            },
+            "enabled": true
+        }
+    }
+}
+
+The reverse of the above problem, Displays JSON files in a flat format
+https://github.com/soheilpro/catj
+
+Write a timeIt function for async callbacks
+https://medium.com/@homam/timing-asynchronous-functions-in-javascript-es6-2635ed306377#.krb5v4zeh
+
+Implement a Base32 encoding/decoding functions
+https://www.crockford.com/base32.html
+chars: 0-9A-Z excluded: i L o U
+
+Write a single function that takes one argument. That will be an array of credit card numbers. Assume the array can have any number of credit card numbers and each one is a string of digits and dashes. Your function should return the credit card number that has the largest sum of digits.
+Sample:
+var cardNum = ["4916-2600-1804-0530", "4779-252888-3972", "4252-278893-7978", "4556-4242-9293-2260"];
+
+Implement a module that computes the cartesian product of arrays provided by an array or an object
+https://www.npmjs.com/package/cartesian
+
+How to update deep nested properties of an object in immutable way? Check my answer in the below question.
+https://stackoverflow.com/questions/56426038/react-state-updating-property-on-object-in-nested-array
+
+
+[DS/Algo]
+Given a number n, print all possible arrangements of n pairs of nested parenthesis
+
+Rotate clockwise a NxN matrix
+
+Return distinct values from a list (i.e. "1 3 5 3 7 3 1 1 5" -> "1 3 5 7").
+Return distinct values and their counts (i.e. the list above becomes "1(3) 3(3) 5(2) 7(1)").
+
+Given a number N where 1 million > N > 0 whole numbers only output the number in words
+e.g: 384765 output: three hundred eighty four thousand seven hundred sixty five
+
+HTML is a tree data structure. Write a function that prints the max depth of the tree
+Ex: https://github.com/gopicode/web/blob/master/snippets/max.js
+
+Implement JSON.stringify function
+Ex: https://github.com/gopicode/web/blob/master/format-json.js
+
+[Code]
+https://github.com/parro-it/awesome-micro-npm-packages
+
+[javascript]
+https://github.com/kolodny/exercises
+
+[react]
+https://itnext.io/reactjs-interview-questions-for-senior-developers-64618f6a0aca
+https://github.com/react-designer/react-designer - Editable vector graphics in your react apps
+
+[links]
+https://github.com/kdn251/interviews
+https://github.com/yangshun/tech-interview-handbook/
+https://github.com/yangshun/front-end-interview-handbook
+https://30secondsofinterviews.org/ - questions
+https://github.com/FAQGURU/FAQGURU - large list of lists
+https://github.com/MaximAbramchuck/awesome-interview-questions - A curated awesome list of lists of interview questions
+https://mortoray.com/2019/03/01/essential-code-for-lists-and-vectors-in-an-interview/
+https://github.com/lydiahallie/javascript-questions - advanced tricky
