@@ -34,5 +34,5 @@ maxChain HTML->BODY->DIV->HEADER->DIV->DETAILS->DETAILS-MENU->DIV->DIV->DETAILS-
   console.log('url', document.URL);
   console.log('maxDepth', result.maxDepth);
   console.log('maxChain', result.maxChain.map(el => el.nodeName).join('->'));
-  result.maxChain.forEach(el => console.log(el));
+  //result.maxChain.forEach(el => console.log(el));
 }())
